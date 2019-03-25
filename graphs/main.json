@@ -1,0 +1,64 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "core/Repeat_rk87c": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "Repeat",
+                "x": 576,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Callback_ms804": {
+            "component": "core/Callback",
+            "metadata": {
+                "label": "Callback",
+                "x": 396,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_zxolj": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "Output",
+                "x": 684,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/Repeat_rk87c",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_zxolj",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "hello world",
+            "tgt": {
+                "process": "core/Repeat_rk87c",
+                "port": "in"
+            }
+        }
+    ]
+}
